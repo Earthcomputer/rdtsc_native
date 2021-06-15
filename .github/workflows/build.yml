@@ -48,7 +48,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.release_url }}
-          asset_path: ./target/release/rdtsc_native
+          asset_path: ./target/release/librdtsc_native.so
           asset_name: librdtsc_native.so
           asset_content_type: application/octet-stream
   windows:
@@ -73,7 +73,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.release_url }}
-          asset_path: .\target\release\rdtsc_native.exe
+          asset_path: .\target\release\rdtsc_native.dll
           asset_name: rdtsc_native.dll
           asset_content_type: application/octet-stream
   macos:
@@ -98,6 +98,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.release_url }}
-          asset_path: ./target/release/rdtsc_native
+          asset_path: ./target/release/librdtsc_native.so
           asset_name: librdtsc_native.jnilib
           asset_content_type: application/octet-stream
